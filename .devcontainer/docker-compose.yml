@@ -1,0 +1,20 @@
+services:
+  my-core-bot:
+    image: ghcr.io/42core-team/my-core-bot:dev
+    platform: linux/amd64
+    volumes:
+      - ..:/workspace:cached
+    stdin_open: true
+    networks:
+      - default
+
+  visualizer:
+    image: ghcr.io/42core-team/visualizer:dev
+    environment:
+      PORT: 80
+      SOCKET_SERVER: "my-core-bot:4242"
+      HOST: "127.0.0.1:80"
+    ports:
+      - 80:80
+    networks:
+      - default
