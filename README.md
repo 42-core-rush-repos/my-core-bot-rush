@@ -12,7 +12,7 @@ Welcome to the **CORE** Rush 02 project repository! We’re excited to have you 
 
 1. Clone the repository and set up your dev container:
    ```bash
-   git clone git@github.com:42core-team/my-core-bot.git && cd my-core-bot && make devcontainer
+   git clone <ssh link to your repo> && cd my-core-bot && make devcontainer
    ```
 2. Run `make` in the terminal to test.
 3. Open [localhost](http://localhost) in your browser to see the gameplay.
